@@ -288,3 +288,91 @@ a:hover {
     background: #4fc3f7;
     color: #0d1b2a;
 }
+
+/* Container */
+.privacy-optout {
+    margin: 2em 0;
+    text-align: center;
+}
+
+/* Button Style */
+.privacy-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #415a77;       /* Matches your block and game elements */
+    color: #a2d2ff;                  /* Light text */
+    padding: 0.4em 1em;              /* Compact size */
+    border-radius: 6px;              /* Rounded corners */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid #4fc3f7;       /* Cyan outline */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    gap: 0.4em;
+}
+
+/* Font Awesome Icon */
+.privacy-button i {
+    color: inherit;                 /* Inherits text color */
+    font-size: 1rem;                /* Same as text */
+}
+
+/* Hover State */
+.privacy-button:hover {
+    background-color: #4fc3f7;
+    color: #0d1b2a;                 /* Dark background text color */
+}
+
+/* Fullscreen dark overlay */
+.privacy-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(13, 27, 42, 0.85); /* semi-transparent dark */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+/* Popup content box */
+.privacy-popup-content {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  height: 80vh;
+  background-color: #1b263b;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(79, 195, 247, 0.7);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Close button */
+.privacy-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #a2d2ff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.privacy-close:hover {
+  color: #4fc3f7;
+}
+
+/* iframe fills the popup content */
+.privacy-popup-content iframe {
+  flex: 1;
+  border: none;
+  border-radius: 0 0 10px 10px;
+}
