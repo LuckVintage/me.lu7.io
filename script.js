@@ -53,22 +53,27 @@ window.addEventListener("DOMContentLoaded", () => {
     setInterval(updateTime, 60000);
 });
 
-const privacyToggle = document.getElementById('privacy-toggle');
-const privacyPopup = document.getElementById('privacy-popup');
-const privacyClose = document.getElementById('privacy-close');
+const privacyToggle = document.getElementById("privacy-toggle");
+const privacyPopup = document.getElementById("privacy-popup");
+const privacyClose = document.getElementById("privacy-close");
 
-privacyToggle.addEventListener('click', () => {
-  privacyPopup.style.display = 'flex';
+privacyToggle.addEventListener("click", () => {
+    privacyPopup.style.display = "flex";
 });
 
-privacyClose.addEventListener('click', () => {
-  privacyPopup.style.display = 'none';
+privacyClose.addEventListener("click", () => {
+    privacyPopup.style.display = "none";
 });
 
-// Optional: Close popup on clicking outside content area
-privacyPopup.addEventListener('click', (e) => {
-  if (e.target === privacyPopup) {
-    privacyPopup.style.display = 'none';
-  }
+privacyPopup.addEventListener("click", (e) => {
+    if (e.target === privacyPopup) {
+        privacyPopup.style.display = "none";
+    }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const yearSpan = document.getElementById("current-year");
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+});
