@@ -41,7 +41,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
         const dayOfWeek = new Intl.DateTimeFormat("en-GB", { weekday: "long" }).format(now);
 
-        const timeString = `It's ${formattedTime} on ${dayOfWeek} for me`;
+        const timeString = `My time: ${formattedTime} on ${dayOfWeek}`;
 
         if (timeEl) {
             timeEl.innerHTML = `<i class="fa-solid fa-clock"></i> ${timeString}`;
