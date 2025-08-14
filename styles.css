@@ -121,13 +121,22 @@ header h1 {
     justify-content: space-between;
     margin-top: 30px;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .block {
     background: #1b263b;
     padding: 15px;
     border-radius: 10px;
-    flex: 1;
+    flex: 1 1 calc(33.333% - 13.33px);
+    box-sizing: border-box;
+    min-width: 250px;
+}
+
+@media (max-width: 768px) {
+    .block {
+        flex: 1 1 100%;
+    }
 }
 
 .block h2 {
