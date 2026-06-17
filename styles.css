@@ -1,0 +1,408 @@
+body {
+    background-color: #0d1b2a;
+    color: #e0e0f0;
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0d1b2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.noscript-warning {
+    margin-top: 1rem;
+    background: #ffdddd;
+    color: #000;
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 400px;
+}
+
+.noscript-warning a {
+    color: #003366;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.loading-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #333;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+header h1 {
+    text-align: center;
+    color: #4fc3f7;
+    font-size: 2rem;
+}
+
+.profile {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    background-color: #1b263b;
+    border-radius: 50%;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.info {
+    flex: 1;
+}
+
+.games {
+    margin-top: 10px;
+}
+
+.game {
+    display: inline-block;
+    background: #415a77;
+    border-radius: 8px;
+    padding: 4px 8px;
+    margin: 2px;
+    font-size: 0.9em;
+    color: #e0e0f0;
+}
+
+.discord {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.block {
+    background: #1b263b;
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1 1 calc(33.333% - 13.33px);
+    box-sizing: border-box;
+    min-width: 250px;
+}
+
+@media (max-width: 768px) {
+    .block {
+        flex: 1 1 100%;
+    }
+}
+
+.block h2 {
+    font-weight: bold;
+    color: #699bb2;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #a2d2ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #a2d2ff;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.social-icons i {
+    font-size: 1.5rem;
+}
+
+.social-icons a:hover {
+    color: #4fc3f7;
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: #1b263b;
+    color: #a2d2ff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    border-top: 1px solid #415a77;
+}
+
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .details {
+        flex-direction: column;
+    }
+
+    .block {
+        width: 100%;
+    }
+
+    .social-icons {
+        align-items: center;
+        text-align: left;
+    }
+
+    .social-icons a {
+        justify-content: center;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .game {
+        font-size: 0.85em;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+    }
+
+    .discord img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+.song-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.song-list li {
+    margin-bottom: 15px;
+}
+
+.song-list a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.song-list a:hover {
+    text-decoration: underline;
+}
+
+.song-list i {
+    font-size: 1.5rem;
+    color: #4fc3f7;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.song-name {
+    font-weight: bold;
+    color: #4fc3f7;
+    font-size: 1.1rem;
+    margin-right: 10px;
+}
+
+.artist-name {
+    font-size: 0.9rem;
+    color: #a2d2ff;
+    display: block;
+    margin-top: 5px;
+}
+
+.games a.game {
+    display: inline-block;
+    background: #415a77;
+    border-radius: 8px;
+    padding: 4px 8px;
+    margin: 2px;
+    font-size: 0.9em;
+    color: #e0e0f0;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.games a.game:hover {
+    background: #4fc3f7;
+    color: #0d1b2a;
+}
+
+.privacy-optout {
+    margin: 2em 0;
+    text-align: center;
+}
+
+.privacy-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #415a77;
+    color: #a2d2ff;
+    padding: 0.4em 1em;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid #4fc3f7;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    gap: 0.4em;
+}
+
+.privacy-button i {
+    color: inherit;
+    font-size: 1rem;
+}
+
+.privacy-button:hover {
+    background-color: #4fc3f7;
+    color: #0d1b2a;
+}
+
+.privacy-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(13, 27, 42, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.privacy-popup-content {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    height: 80vh;
+    background-color: #1b263b;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(79, 195, 247, 0.7);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.privacy-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #a2d2ff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.privacy-close:hover {
+    color: #4fc3f7;
+}
+
+.privacy-popup-content iframe {
+    flex: 1;
+    border: none;
+    border-radius: 0 0 10px 10px;
+}
+
+.github-edit-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    padding: 0.4em 1em;
+    font-size: 0.9rem;
+    color: #a2d2ff;
+    text-decoration: none;
+    border-radius: 6px;
+    background-color: #415a77;
+    border: 1px solid #4fc3f7;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.github-edit-button i {
+    font-size: 1rem;
+    color: inherit;
+}
+
+.github-edit-button:hover {
+    background-color: #4fc3f7;
+    color: #0d1b2a;
+}
+
+.github-edit-button:hover i {
+    color: inherit;
+}
